@@ -106,7 +106,7 @@ def log(update, context):
 
 
 help_string_telegraph = f'''<br>
-<b>/{BotCommands.HelpxCommand}</b>: To know the all comannds of bot.
+<b>/{BotCommands.HelpxCommand}</b>: To get this message
 <br><br>
 <b>/{BotCommands.MirrorxCommand}</b> [download_url][magnet_link]: মিরর করতে - .<b>/{BotCommands.MirrorxCommand}</b> মিরর সংক্লান্ত সকল তথ্য পেতে - 
 <br><br>
