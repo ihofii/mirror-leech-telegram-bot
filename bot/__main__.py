@@ -106,7 +106,7 @@ def log(update, context):
 
 
 help_string_telegraph = f'''<br>
-<b>/{BotCommands.HelpxCommand}</b>: বট ব্যাবহারের কমান্ডগুলো জানতে - 
+<b>/{BotCommands.HelpxCommand}</b>: To know the all comannds of bot.
 <br><br>
 <b>/{BotCommands.MirrorxCommand}</b> [download_url][magnet_link]: মিরর করতে - .<b>/{BotCommands.MirrorxCommand}</b> মিরর সংক্লান্ত সকল তথ্য পেতে - 
 <br><br>
@@ -151,7 +151,7 @@ help_string_telegraph = f'''<br>
 <br><br>
 <b>/{BotCommands.RssListxCommand}</b>: আর.এস.এস এর সকল Subscriber দের তথ্য জানতে - 
 <br><br>
-<b>/{BotCommands.RssGetxCommand}</b>: [Title] [Number](last N links): Force fetch এর শেষের N  লিঙ্ক - 
+<b>/{BotCommands.RssGetxCommand}</b>: [Title] [Number](last N links): Force fetch এর শেষের N লিঙ্ক - 
 <br><br>
 <b>/{BotCommands.RssSubxCommand}</b>: [Title] [Rss Link] f: [filter]: আর.এস.এস এর নতুন Subscribe এর ফীড
 <br><br>
