@@ -40,20 +40,22 @@ def stats(update, context):
     mem_t = get_readable_file_size(memory.total)
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
-    stats = f'<b>Bot Uptime:</b> {currentTime}\n\n'\
-            f'<b>Total Disk Space:</b> {total}\n'\
-            f'<b>Used:</b> {used} | <b>Free:</b> {free}\n\n'\
-            f'<b>Upload:</b> {sent}\n'\
-            f'<b>Download:</b> {recv}\n\n'\
-            f'<b>CPU:</b> {cpuUsage}%\n'\
-            f'<b>RAM:</b> {mem_p}%\n'\
-            f'<b>DISK:</b> {disk}%\n\n'\
-            f'<b>Physical Cores:</b> {p_core}\n'\
-            f'<b>Total Cores:</b> {t_core}\n\n'\
-            f'<b>SWAP:</b> {swap_t} | <b>Used:</b> {swap_p}%\n'\
-            f'<b>Memory Total:</b> {mem_t}\n'\
-            f'<b>Memory Free:</b> {mem_a}\n'\
-            f'<b>Memory Used:</b> {mem_u}\n'
+    stats = f'<b>⏲️ আপটাইম:</b> {currentTime}\n\n'\
+            f'<b>📀 টোটাল ডিস্কস্পেস:</b> {total}\n'\
+            f'<b>📀 টোটাল ডিস্কস্পেস:</b> {used} | <b>🔥 ফ্রী স্পেস:</b> {free}\n\n'\
+            f'<b>📤 আপলোড:</b> {sent}\n'\
+            f'<b>📥 ডাউনলোড:</b> {recv}\n\n'\
+            f'<b>🖥️ সিপিউ লোড:</b> {cpuUsage}%\n'\
+            f'<b>💾 র‍্যাম:</b> {mem_p}%\n'\
+            f'<b>💿 ডিস্ক:</b> {disk}%\n\n'\
+            f'<b>🔸 ফিজিক্যাল কোর:</b> {p_core}\n'\
+            f'<b>🗃️ মোট কোর:</b> {t_core}\n\n'\
+            f'<b>⚠ সোআপ:</b> {swap_t} | <b>🌡️ ব্যবহৃত সোআপ:</b> {swap_p}%\n'\
+            f'<b>💾 টোটাল মেমোরি:</b> {mem_t}\n'\
+            f'<b>🔥 ফ্রী মেমোরি:</b> {mem_a}\n'\
+            f'<b>🌡️ ব্যবহৃত মেমোরি:</b> {mem_u}\n'\
+            f'<b>✍️ অনুবাদকঃ "আই এইচ নাছিম ©️"<b/>\n'\
+            f'<b>🙏 সম্পাদনায়ঃ "মোঃ ইকবাল হোসেন নাছিম"<b/>\n'
     sendMessage(stats, context.bot, update)
 
 
@@ -172,7 +174,7 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-        title='Mirror-Leech-Bot Help',
+        title='Ih-Nasim-Telegram-Bot',
         content=help_string_telegraph,
     )["path"]
 
