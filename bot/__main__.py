@@ -104,72 +104,72 @@ def ping(update, context):
 def log(update, context):
     sendLogFile(context.bot, update)
 
-
 help_string_telegraph = f'''<br>
-<b>/{BotCommands.HelpxCommand}</b>: To get this message
+<b>/{BotCommands.HelpCommand}</b>: To get this message
 <br><br>
-<b>/{BotCommands.MirrorxCommand}</b> [download_url][magnet_link]: মিরর করতে - .<b>/{BotCommands.MirrorxCommand}</b> মিরর সংক্লান্ত সকল তথ্য পেতে - 
+<b>/{BotCommands.MirrorCommand}</b> [download_url][magnet_link]: Start mirroring to Google Drive. Send <b>/{BotCommands.MirrorCommand}</b> for more help
 <br><br>
-<b>/{BotCommands.ZipMirrorxCommand}</b> [download_url][magnet_link]: জিপ ফাইল আকারে মিরর করতে - 
+<b>/{BotCommands.ZipMirrorCommand}</b> [download_url][magnet_link]: Start mirroring and upload the file/folder compressed with zip extension
 <br><br>
-<b>/{BotCommands.UnzipMirrorxCommand}</b> [download_url][magnet_link]: মিরর ফাইল আনজিপ করতে -
+<b>/{BotCommands.UnzipMirrorCommand}</b> [download_url][magnet_link]: Start mirroring and upload the file/folder extracted from any archive extension
 <br><br>
-<b>/{BotCommands.QbMirrorxCommand}</b> [magnet_link][torrent_file][torrent_file_url]: QB হিসেবে মিরর করতে - , Use <b>/{BotCommands.QbMirrorxCommand} s</b> ডাউনলোডের পূর্বে ফাইল সিলেক্ট করুন - 
+<b>/{BotCommands.QbMirrorCommand}</b> [magnet_link][torrent_file][torrent_file_url]: Start Mirroring using qBittorrent, Use <b>/{BotCommands.QbMirrorCommand} s</b> to select files before downloading
 <br><br>
-<b>/{BotCommands.QbZipMirrorxCommand}</b> [magnet_link][torrent_file][torrent_file_url]: Start mirroring using qBittorrent and upload the file/folder compressed with zip extension
+<b>/{BotCommands.QbZipMirrorCommand}</b> [magnet_link][torrent_file][torrent_file_url]: Start mirroring using qBittorrent and upload the file/folder compressed with zip extension
 <br><br>
-<b>/{BotCommands.QbUnzipMirrorxCommand}</b> [magnet_link][torrent_file][torrent_file_url]: QBitTorrent হিসেবে মিরর করতে এবং archive extensionand থেকে ফাইল/ফোল্ডার এক্সট্র্যাক করতে -
+<b>/{BotCommands.QbUnzipMirrorCommand}</b> [magnet_link][torrent_file][torrent_file_url]: Start mirroring using qBittorrent and upload the file/folder extracted from any archive extension
 <br><br>
-<b>/{BotCommands.LeechxCommand}</b> [download_url][magnet_link]: লিঙ্ক থেকে ফাইল টেলিগ্রামে আপলোড করতে - , Use <b>/{BotCommands.LeechxCommand} s</b> টেলিগ্রামে আপলোড করার পূর্বে ফাইলটি সিলেক্ট করুন - 
+<b>/{BotCommands.LeechCommand}</b> [download_url][magnet_link]: Start leeching to Telegram, Use <b>/{BotCommands.LeechCommand} s</b> to select files before leeching
 <br><br>
-<b>/{BotCommands.ZipLeechxCommand}</b> [download_url][magnet_link]: জিপ ফাইল/ফোল্ডার আনজিপ করে টেলিগ্রামে আপলোড করতে - <br><br>
-<b>/{BotCommands.UnzipLeechxCommand}</b> [download_url][magnet_link][torent_file]: যেকোনো ফাইল/ফোল্ডার archive extension থেকে এক্সট্র্যাক করে টেলিগ্রামে আপলোড করতে - 
+<b>/{BotCommands.ZipLeechCommand}</b> [download_url][magnet_link]: Start leeching to Telegram and upload the file/folder compressed with zip extension
 <br><br>
-<b>/{BotCommands.QbLeechxCommand}</b> [magnet_link][torrent_file][torrent_file_url]: qBittorrent ব্যবহার করে ফাইল টেলিগ্রামে আপলোড করতে - , Use <b>/{BotCommands.QbLeechCommand1} s</b> কমান্ডের পূর্বে ফাইল সিলেক্ট করুন - 
+<b>/{BotCommands.UnzipLeechCommand}</b> [download_url][magnet_link][torent_file]: Start leeching to Telegram and upload the file/folder extracted from any archive extension
 <br><br>
-<b>/{BotCommands.QbZipLeechxCommand}</b> [magnet_link][torrent_file][torrent_file_url]: QBitTorrent হিসেবে টেলিগ্রামে ফাইল/ফোল্ডার আপলোড  এবং extension থেকে ফাইল/ফোল্ডার কমপ্রেস করতে - 
+<b>/{BotCommands.QbLeechCommand}</b> [magnet_link][torrent_file][torrent_file_url]: Start leeching to Telegram using qBittorrent, Use <b>/{BotCommands.QbLeechCommand} s</b> to select files before leeching
 <br><br>
-<b>/{BotCommands.QbUnzipLeechxCommand}</b> [magnet_link][torrent_file][torrent_file_url]: যেকোনো archive extensio থেকে QBitTorrent হিসেবে টেলিগ্রামে ফাইল/ফোল্ডার আপলোড করতে - 
+<b>/{BotCommands.QbZipLeechCommand}</b> [magnet_link][torrent_file][torrent_file_url]: Start leeching to Telegram using qBittorrent and upload the file/folder compressed with zip extension
 <br><br>
-<b>/{BotCommands.ClonexCommand}</b> [drive_url][gdtot_url]: যেকোনো জিডিটিওটি কিংবা গুগল ড্রাইভ লিঙ্ক থেকে ফাইল/ফোল্ডার কপি করতে -
+<b>/{BotCommands.QbUnzipLeechCommand}</b> [magnet_link][torrent_file][torrent_file_url]: Start leeching to Telegram using qBittorrent and upload the file/folder extracted from any archive extension
 <br><br>
-<b>/{BotCommands.CountxCommand}</b> [drive_url][gdtot_url]: যেকোনো গুগল ড্রাইভের ফাইল/ফোল্ডার গণনা করতে - 
+<b>/{BotCommands.CloneCommand}</b> [drive_url][gdtot_url]: Copy file/folder to Google Drive
 <br><br>
-<b>/{BotCommands.DeletexCommand}</b> [drive_url]: গুগল ড্রাইভ থেকে ফাইল ডিলেট করতে ( শুধুমাত্র এডমিন এবং সাব-এডমিন কমান্ড ব্যবহার করতে পারবে - )
+<b>/{BotCommands.CountCommand}</b> [drive_url][gdtot_url]: Count file/folder of Google Drive
 <br><br>
-<b>/{BotCommands.WatchxCommand}</b> [yt-dlp supported link]:ফেসবুক,ইউটিউব ইত্যাদি ভিডিও ডাউনলোড করে গুগল ড্রাইভ আপলোড করতে - . Send <b>/{BotCommands.WatchCommand1}</b> আরো সাহায্য পেতে - 
+<b>/{BotCommands.DeleteCommand}</b> [drive_url]: Delete file/folder from Google Drive (Only Owner & Sudo)
 <br><br>
-<b>/{BotCommands.ZipWatchxCommand}</b> [yt-dlp supported link]: ফেসবুক,ইউটিউব ইত্যাদি ভিডিও ডাউনলোড করে জিপ হিসেবে গুগল ড্রাইভ আপলোড করতে - 
+<b>/{BotCommands.WatchCommand}</b> [yt-dlp supported link]: Mirror yt-dlp supported link. Send <b>/{BotCommands.WatchCommand}</b> for more help
 <br><br>
-<b>/{BotCommands.LeechWatchxCommand}</b> [yt-dlp supported link]: ফেসবুক,ইউটিউব ইত্যাদি ভিডিও ডাউনলোড করে টেলিগ্রামে আপলোড করতে - 
+<b>/{BotCommands.ZipWatchCommand}</b> [yt-dlp supported link]: Mirror yt-dlp supported link as zip
 <br><br>
-<b>/{BotCommands.LeechZipWatchxCommand}</b> [yt-dlp supported link]: ফেসবুক,ইউটিউব ইত্যাদি ভিডিও ডাউনলোড করে জিপ হিসেবে টেলিগ্রামে আপলোড করতে - 
+<b>/{BotCommands.LeechWatchCommand}</b> [yt-dlp supported link]: Leech yt-dlp supported link
 <br><br>
-<b>/{BotCommands.LeechSetxCommand}</b>: Leech সেটিং জানতে -
+<b>/{BotCommands.LeechZipWatchCommand}</b> [yt-dlp supported link]: Leech yt-dlp supported link as zip
 <br><br>
-<b>/{BotCommands.SetThumbxCommand}</b>: রিপ্লাই করে থামনাইল সেট করতে - 
+<b>/{BotCommands.LeechSetCommand}</b>: Leech settings
 <br><br>
-<b>/{BotCommands.RssListxCommand}</b>: আর.এস.এস এর সকল Subscriber দের তথ্য জানতে - 
+<b>/{BotCommands.SetThumbCommand}</b>: Reply photo to set it as Thumbnail
 <br><br>
-<b>/{BotCommands.RssGetxCommand}</b>: [Title] [Number](last N links): Force fetch এর শেষের N লিঙ্ক - 
+<b>/{BotCommands.RssListCommand}</b>: List all subscribed rss feed info
 <br><br>
-<b>/{BotCommands.RssSubxCommand}</b>: [Title] [Rss Link] f: [filter]: আর.এস.এস এর নতুন Subscribe এর ফীড
+<b>/{BotCommands.RssGetCommand}</b>: [Title] [Number](last N links): Force fetch last N links
 <br><br>
-<b>/{BotCommands.RssUnSubxCommand}</b>: [Title]:  টাইটেল ব্যবহার করে আর.এস.এস Unubscribe করতে - 
+<b>/{BotCommands.RssSubCommand}</b>: [Title] [Rss Link] f: [filter]: Subscribe new rss feed
 <br><br>
-<b>/{BotCommands.RssUnSubAllxCommand}</b>: আর.এস.এস এর সকল ফীড subscriptions রিমভ করতে - 
+<b>/{BotCommands.RssUnSubCommand}</b>: [Title]: Unubscribe rss feed by title
 <br><br>
-<b>/{BotCommands.CancelMirrorx}</b>: মিরর ক্যানসেল করতে - 
+<b>/{BotCommands.RssUnSubAllCommand}</b>: Remove all rss feed subscriptions
 <br><br>
-<b>/{BotCommands.CancelAllxCommand}</b>: সকল মিরর ক্যানসেল করতে - 
+<b>/{BotCommands.CancelMirror}</b>: Reply to the message by which the download was initiated and that download will be cancelled
 <br><br>
-<b>/{BotCommands.ListxCommand}</b> [query]: গুগল ড্রাইভ সার্চ করতে - 
+<b>/{BotCommands.CancelAllCommand}</b>: Cancel all downloading tasks
 <br><br>
-<b>/{BotCommands.SearchxCommand}</b> [query]: টরেন্ট ব্যবহার করে এপিআই সার্চ করতে - 
+<b>/{BotCommands.ListCommand}</b> [query]: Search in Google Drive(s)
+<br><br>
+<b>/{BotCommands.SearchCommand}</b> [query]: Search for torrents with API
 <br>sites: <code>rarbg, 1337x, yts, etzv, tgx, torlock, piratebay, nyaasi, ettv</code><br><br>
-<b>/{BotCommands.StatusxCommand}</b>: সকল কাজের তথ্য পেতে - 
+<b>/{BotCommands.StatusCommand}</b>: Shows a status of all the downloads
 <br><br>
-<b>/{BotCommands.StatsxCommand}</b>: বটের সকল তথ্য পেতে - 
+<b>/{BotCommands.StatsCommand}</b>: Show Stats of the machine the bot is hosted on
 '''
 
 help = telegraph.create_page(
@@ -179,27 +179,16 @@ help = telegraph.create_page(
 
 help_string = f'''
 These comannds are only for bot owner and authorize users.If you are not a authorize user never user these comannds.
-
 /{BotCommands.PingxCommand}: Check how long it takes to Ping the Bot
-
 /{BotCommands.AuthorizexCommand}: Authorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
-
 /{BotCommands.UnAuthorizexCommand}: Unauthorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
-
 /{BotCommands.AuthorizedUsersxCommand}: Show authorized users (Only Owner & Sudo)
-
 /{BotCommands.AddSudoxCommand}: Add sudo user (Only Owner)
-
 /{BotCommands.RmSudoxCommand}: Remove sudo users (Only Owner)
-
 /{BotCommands.RestarxtCommand}: Restart and update the bot
-
 /{BotCommands.LogxCommand}: Get a log file of the bot. Handy for getting crash reports
-
 /{BotCommands.SpeedxCommand}: Check Internet Speed of the Host
-
 /{BotCommands.ShellxCommand}: Run commands in Shell (Only Owner)
-
 /{BotCommands.ExecHelpxCommand}: Get help for Executor module (Only Owner)
 '''
 
