@@ -3,22 +3,19 @@ from bot.helper.ext_utils.bot_utils import MirrorStatus, get_readable_file_size,
 from time import sleep
 
 def get_download(client, hash_):
-    try:
-        return client.torrents_info(torrent_hashes=hash_)[0]
-    except:
-        pass
+    return client.torrents_info(torrent_hashes=hash_)[0]
 
 
 class QbDownloadStatus:
 
-    def __init__(self, listener, client, hash_, select):
-        self.__gid = hash_[:12]
-        self.__hash = hash_
+    def __init__(self, listener, client, gid, qbhash, select):
+        self.__gid = gid
+        self.__hash = qbhash
         self.__select = select
         self.__client = client
         self.__listener = listener
         self.__uid = listener.uid
-        self.__info = get_download(client, hash_)
+        self.__info = get_download(client, qbhash)
         self.message = listener.message
 
     def __update(self):

@@ -2,10 +2,7 @@ from bot import aria2, DOWNLOAD_DIR, LOGGER
 from bot.helper.ext_utils.bot_utils import MirrorStatus
 
 def get_download(gid):
-    try:
-        return aria2.get_download(gid)
-    except:
-        pass
+    return aria2.get_download(gid)
 
 
 class AriaDownloadStatus:
